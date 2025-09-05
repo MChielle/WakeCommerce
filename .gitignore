@@ -52,3 +52,6 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+/Projeto Teste Wake Commerce.pdf
+/.vs
+/src/WakeCommerce/.vs/WakeCommerce
