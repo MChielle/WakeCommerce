@@ -1,5 +1,4 @@
-﻿
-using ServiceDefaults.Results;
+﻿using ServiceDefaults.Results;
 
 namespace Application.Abstractions.Messaging;
 

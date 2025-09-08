@@ -13,6 +13,10 @@ FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["Catalog.Web.Api/Catalog.Web.Api.csproj", "Catalog.Web.Api/"]
+COPY ["Catalog.Application/Catalog.Application.csproj", "Catalog.Application/"]
+COPY ["Catalog.Domain/Catalog.Domain.csproj", "Catalog.Domain/"]
+COPY ["Catalog.Infrastructure/Catalog.Infrastructure.csproj", "Catalog.Infrastructure/"]
+COPY ["Shared.Defaults/Shared.Defaults.csproj", "Shared.Defaults/"]
 RUN dotnet restore "./Catalog.Web.Api/Catalog.Web.Api.csproj"
 COPY . .
 WORKDIR "/src/Catalog.Web.Api"
