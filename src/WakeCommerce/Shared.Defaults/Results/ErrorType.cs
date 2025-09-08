@@ -1,4 +1,4 @@
-﻿namespace ServiceDefaults.Results;
+﻿namespace Shared.Defaults.Results;
 
 public enum ErrorType
 {

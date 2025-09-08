@@ -1,6 +1,7 @@
-﻿using ServiceDefaults.Results;
+﻿using Catalog.Application.Abstractions.Requests;
+using Shared.Defaults.Results;
 
-namespace Application.Abstractions.Messaging;
+namespace Catalog.Application.Abstractions.Handlers;
 
 public interface IQueryHandler<in TQuery, TResponse>
     where TQuery : IQuery<TResponse>

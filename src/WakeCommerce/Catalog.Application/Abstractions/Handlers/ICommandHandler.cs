@@ -1,5 +1,5 @@
 ﻿using Catalog.Application.Abstractions.Requests;
-using ServiceDefaults.Results;
+using Shared.Defaults.Results;
 
 namespace Catalog.Application.Abstractions.Handlers;
 

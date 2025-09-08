@@ -1,3 +1,3 @@
-﻿namespace Application.Abstractions.Messaging;
+﻿namespace Catalog.Application.Abstractions.Requests;
 
 public interface IQuery<TResponse>;

@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Shared.Defaults.Results;
 
-namespace ServiceDefaults.Results;
+namespace Shared.Defaults.Results;
 
 public class Result
 {

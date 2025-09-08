@@ -1,4 +1,4 @@
-﻿using ServiceDefaults.Results;
+﻿using Shared.Defaults.Results;
 
 namespace Shared.Defaults.Results;
 

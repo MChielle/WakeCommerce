@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Mobo.Api.Controllers.v1
+namespace Catalog.Web.Api.Controllers
 {
     [Route("api/[controller]")]
     public class HealthCheckController : ControllerBase
