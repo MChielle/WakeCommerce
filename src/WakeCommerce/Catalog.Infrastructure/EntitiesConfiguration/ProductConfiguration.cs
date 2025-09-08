@@ -10,6 +10,13 @@ namespace Catalog.Infrastructure.EntitiesConfiguration
         {
             builder.HasKey(t => t.Id);
 
+            builder.Property(x => x.Name)
+                .IsRequired()
+                .HasMaxLength(Product.NameMaxLength);
+
+            builder.HasIndex(x => x.Name)
+                .IsUnique();
+
             builder.Property(t => t.CreatedAt)
                 .HasConversion(d => d != null ? DateTime.SpecifyKind(d.Date, DateTimeKind.Utc) : d, v => v);
 

@@ -23,4 +23,11 @@ public sealed class ApplicationDbContext(
 
         return result;
     }
+
+    public ApplicationDbContext CreateDbContext(string[] args)
+    {
+        var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
+
+        return new ApplicationDbContext(options);
+    }
 }
