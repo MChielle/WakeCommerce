@@ -12,19 +12,29 @@ builder.Services
 
 builder.Services.AddEndpointsApiExplorer();
 
-var app = builder.Build();
+WebApplication app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
     app.UseSwaggerWithUi();
+
+    app.ApplyMigrations();
 }
 
 app.ConfigureRewriter();
 
 app.UseHttpsRedirection();
 
+app.UseExceptionHandler();
+
 app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+await app.RunAsync();
+
+//For integration tests
+namespace Catalog.Web.Api
+{
+    public partial class Program;
+}

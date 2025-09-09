@@ -1,4 +1,6 @@
-﻿namespace Catalog.Web.Api;
+﻿using Catalog.Web.Api.Infrastructure;
+
+namespace Catalog.Web.Api;
 
 public static class DependencyInjection
 {
@@ -8,6 +10,7 @@ public static class DependencyInjection
         services.AddSwaggerGen();
 
         services.AddControllers();
+        services.AddExceptionHandler<GlobalExceptionHandler>();
 
         services.AddProblemDetails();
 
