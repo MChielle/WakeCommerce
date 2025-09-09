@@ -4,22 +4,39 @@ namespace Catalog.Domain.Entities.Products
 {
     public sealed class Product : Entity
     {
-        public Product(string name, decimal quantity, decimal price)
+        //Create Constructor
+        public Product(string name, decimal quantity, decimal price, DateTime createdAt)
+            : base()
         {
             Name = name;
             Quantity = quantity;
             Price = price;
+            CreatedAt = createdAt;
         }
 
-        public Product(Guid id, string name, decimal quantity, decimal price)
+        //Update Constructor
+        public Product(Guid id, string name, decimal quantity, decimal price, DateTime? updatedAt)
             : base(id)
         {
             Name = name;
             Quantity = quantity;
             Price = price;
+            UpdatedAt = updatedAt;
         }
 
-        private Product() //Required by EF
+        //Seeder Constructor
+        public Product(Guid id, string name, decimal quantity, decimal price,DateTime createdAt, DateTime? updatedAt)
+            : base(id)
+        {
+            Name = name;
+            Quantity = quantity;
+            Price = price;
+            CreatedAt = createdAt;
+            UpdatedAt = updatedAt;
+        }
+
+        //EF Constructor
+        private Product()
         {
         }
 
