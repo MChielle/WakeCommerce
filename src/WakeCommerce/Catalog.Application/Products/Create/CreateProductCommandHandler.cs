@@ -16,17 +16,14 @@ namespace Catalog.Application.Products.Create
         {
             var product = await dbContext.Products
                 .AsNoTracking()
-                .FirstOrDefaultAsync(p => p.Name == command.Name, cancellationToken).ConfigureAwait(false);
+                .FirstOrDefaultAsync(p => p.Name == command.Name, cancellationToken);
 
             if (product is not null)
             {
                 return Result.Failure<Guid>(ProductErrors.Conflict(command.Name));
             }
 
-            var productToAdd = new Product(command.Name, command.Quantity, command.Price)
-            {
-                CreatedAt = dateTimeProvider.UtcNow
-            };
+            var productToAdd = new Product(command.Name, command.Quantity, command.Price, dateTimeProvider.UtcNow);
 
             await dbContext.Products.AddAsync(productToAdd, cancellationToken);
 
