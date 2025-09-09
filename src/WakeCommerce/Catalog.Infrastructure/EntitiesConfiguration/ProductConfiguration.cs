@@ -21,7 +21,7 @@ namespace Catalog.Infrastructure.EntitiesConfiguration
                 .HasConversion(d => d != null ? DateTime.SpecifyKind(d.Date, DateTimeKind.Utc) : d, v => v);
 
             builder.Property(t => t.UpdatedAt)
-                .HasConversion(d => d != null ? DateTime.SpecifyKind(d.Date, DateTimeKind.Utc) : d, v => v);
+                .HasConversion(d => d != null ? DateTime.SpecifyKind(d.Value.Date, DateTimeKind.Utc) : d, v => v);
 
             builder.Property(t => t.Quantity)
                 .HasPrecision(Product.QuantityPattern.precision, Product.QuantityPattern.scale);

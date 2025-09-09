@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Catalog.Infrastructure.Database.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250908144801_CreateDatabase")]
+    [Migration("20250908175041_CreateDatabase")]
     partial class CreateDatabase
     {
         /// <inheritdoc />
@@ -53,7 +53,7 @@ namespace Catalog.Infrastructure.Database.Migrations
                         .HasColumnType("numeric(8,3)")
                         .HasColumnName("quantity");
 
-                    b.Property<DateTime>("UpdatedAt")
+                    b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("updated_at");
 

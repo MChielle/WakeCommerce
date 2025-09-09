@@ -24,7 +24,7 @@ namespace Catalog.Infrastructure.Database.Migrations
                     quantity = table.Column<decimal>(type: "numeric(8,3)", precision: 8, scale: 3, nullable: false),
                     price = table.Column<decimal>(type: "numeric(8,2)", precision: 8, scale: 2, nullable: false),
                     created_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    updated_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                    updated_at = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>
                 {

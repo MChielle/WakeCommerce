@@ -1,5 +1,6 @@
 ﻿using Catalog.Application.Abstractions.Data;
 using Catalog.Domain.Entities.Products;
+using Catalog.Infrastructure.Database.Seeders;
 using Microsoft.EntityFrameworkCore;
 
 namespace Catalog.Infrastructure.Database;
@@ -22,12 +23,5 @@ public sealed class ApplicationDbContext(
         int result = await base.SaveChangesAsync(cancellationToken);
 
         return result;
-    }
-
-    public ApplicationDbContext CreateDbContext(string[] args)
-    {
-        var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
-
-        return new ApplicationDbContext(options);
     }
 }
