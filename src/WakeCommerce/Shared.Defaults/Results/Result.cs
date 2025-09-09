@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using Shared.Defaults.Results;
 
 namespace Shared.Defaults.Results;
 
