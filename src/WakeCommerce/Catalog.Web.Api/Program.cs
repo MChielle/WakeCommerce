@@ -31,10 +31,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-await app.RunAsync();
+app.Run();
 
-//For integration tests
-namespace Catalog.Web.Api
-{
-    public partial class Program;
-}
+public partial class Program { }

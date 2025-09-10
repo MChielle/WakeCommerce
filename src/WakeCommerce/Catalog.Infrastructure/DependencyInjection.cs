@@ -28,6 +28,8 @@ namespace Catalog.Infrastructure
 
         private static IServiceCollection AddDatabase(this IServiceCollection services, IConfiguration configuration)
         {
+            if (configuration.GetSection("environment").Value?.ToLower() == "test") return services;
+
             string? connectionString = configuration.GetConnectionString("Database");
 
             services.AddDbContext<ApplicationDbContext>(

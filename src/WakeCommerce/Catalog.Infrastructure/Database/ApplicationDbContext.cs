@@ -1,11 +1,10 @@
 ﻿using Catalog.Application.Abstractions.Data;
 using Catalog.Domain.Entities.Products;
-using Catalog.Infrastructure.Database.Seeders;
 using Microsoft.EntityFrameworkCore;
 
 namespace Catalog.Infrastructure.Database;
 
-public sealed class ApplicationDbContext(
+public class ApplicationDbContext(
     DbContextOptions<ApplicationDbContext> options)
     : DbContext(options), IApplicationDbContext
 {
