@@ -65,7 +65,6 @@ internal static class ValidationDecorator
         }
     }
 
-
     private static async Task<ValidationFailure[]> ValidateAsync<TCommand>(
         TCommand command,
         IEnumerable<IValidator<TCommand>> validators)

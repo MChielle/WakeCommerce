@@ -1,6 +1,5 @@
 ﻿using Catalog.Application.Abstractions.Data;
 using Catalog.Application.Abstractions.Handlers;
-using Catalog.Application.Products.GetById;
 using Catalog.Domain.Entities.Products;
 using Microsoft.EntityFrameworkCore;
 using Shared.Defaults.Providers;

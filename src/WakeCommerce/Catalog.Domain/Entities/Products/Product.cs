@@ -14,18 +14,8 @@ namespace Catalog.Domain.Entities.Products
             CreatedAt = createdAt;
         }
 
-        //Update Constructor
-        public Product(Guid id, string name, decimal quantity, decimal price, DateTime? updatedAt)
-            : base(id)
-        {
-            Name = name;
-            Quantity = quantity;
-            Price = price;
-            UpdatedAt = updatedAt;
-        }
-
         //Seeder Constructor
-        public Product(Guid id, string name, decimal quantity, decimal price,DateTime createdAt, DateTime? updatedAt)
+        public Product(Guid id, string name, decimal quantity, decimal price, DateTime createdAt, DateTime? updatedAt)
             : base(id)
         {
             Name = name;

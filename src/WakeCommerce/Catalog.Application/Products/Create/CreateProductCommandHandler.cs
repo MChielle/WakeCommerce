@@ -9,7 +9,7 @@ namespace Catalog.Application.Products.Create
 {
     public sealed class CreateProductCommandHandler(
         IApplicationDbContext dbContext,
-        IDateTimeProvider dateTimeProvider) 
+        IDateTimeProvider dateTimeProvider)
         : ICommandHandler<CreateProductCommand, Guid>
     {
         public async Task<Result<Guid>> Handle(CreateProductCommand command, CancellationToken cancellationToken)

@@ -1,12 +1,11 @@
 ﻿using Catalog.Application.Abstractions.Data;
 using Catalog.Application.Abstractions.Handlers;
-using Catalog.Application.Products.GetByFilter;
 using Catalog.Domain.Entities.Products;
 using Microsoft.EntityFrameworkCore;
 using Shared.Defaults.Results;
 using System.Linq.Expressions;
 
-namespace Catalog.Application.Products.GetByFilterOrdered
+namespace Catalog.Application.Products.GetByFilter
 {
     public class GetByFilterProductQueryHandler(IApplicationDbContext context)
         : IQueryHandler<GetByFilterProductQuery, GetByFilterProductResponse>

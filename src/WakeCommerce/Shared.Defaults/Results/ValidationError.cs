@@ -1,6 +1,4 @@
-﻿using Shared.Defaults.Results;
-
-namespace Shared.Defaults.Results;
+﻿namespace Shared.Defaults.Results;
 
 public sealed record ValidationError : Error
 {

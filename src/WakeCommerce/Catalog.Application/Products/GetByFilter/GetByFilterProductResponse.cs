@@ -1,4 +1,4 @@
-﻿namespace Catalog.Application.Products.GetByFilterOrdered
+﻿namespace Catalog.Application.Products.GetByFilter
 {
     public class GetByFilterProductResponse
     {

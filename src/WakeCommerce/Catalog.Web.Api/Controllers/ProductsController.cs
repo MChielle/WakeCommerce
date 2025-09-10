@@ -2,8 +2,8 @@
 using Catalog.Application.Products.Create;
 using Catalog.Application.Products.DeleteById;
 using Catalog.Application.Products.GetByFilter;
-using Catalog.Application.Products.GetByFilterOrdered;
 using Catalog.Application.Products.GetById;
+using Catalog.Application.Products.UpdateById;
 using Catalog.Web.Api.Extensions;
 using Catalog.Web.Api.Infrastructure;
 using Microsoft.AspNetCore.Mvc;

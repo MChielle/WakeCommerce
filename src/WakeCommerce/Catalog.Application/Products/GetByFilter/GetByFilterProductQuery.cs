@@ -1,5 +1,4 @@
 ﻿using Catalog.Application.Abstractions.Requests;
-using Catalog.Application.Products.GetByFilterOrdered;
 
 namespace Catalog.Application.Products.GetByFilter
 {

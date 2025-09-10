@@ -1,5 +1,4 @@
-﻿using Catalog.Application.Abstractions.Requests;
-using FluentValidation;
+﻿using FluentValidation;
 
 namespace Catalog.Application.Products.GetById
 {

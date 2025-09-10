@@ -1,9 +1,7 @@
-﻿using AslaveCare.IntegrationTests.Configuration;
-using Catalog.Infrastructure.Database;
-using Catalog.Infrastructure.Database.Seeders;
+﻿using Catalog.Infrastructure.Database;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Catalog.IntegrationTests
+namespace Integration.Tests
 {
     public abstract class BaseIntegrationTest : IClassFixture<IntegrationTestWebApplicationFactory>
     {

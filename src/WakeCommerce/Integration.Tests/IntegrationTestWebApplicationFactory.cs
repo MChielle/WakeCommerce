@@ -1,7 +1,5 @@
 ﻿using Catalog.Application.Abstractions.Data;
 using Catalog.Infrastructure.Database;
-using Catalog.Infrastructure.Database.Seeders;
-using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
@@ -9,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System.Data.Common;
 
-namespace AslaveCare.IntegrationTests.Configuration
+namespace Integration.Tests
 {
     public class IntegrationTestWebApplicationFactory : WebApplicationFactory<Program>
     {

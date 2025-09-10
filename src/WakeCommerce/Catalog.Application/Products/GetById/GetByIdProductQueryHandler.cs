@@ -6,7 +6,7 @@ using Shared.Defaults.Results;
 
 namespace Catalog.Application.Products.GetById
 {
-    internal class GetByIdProductQueryHandler(IApplicationDbContext context) 
+    public class GetByIdProductQueryHandler(IApplicationDbContext context)
         : IQueryHandler<GetByIdProductQuery, GetByIdProductResponse>
     {
         public async Task<Result<GetByIdProductResponse>> Handle(GetByIdProductQuery query, CancellationToken cancellationToken)
@@ -23,7 +23,7 @@ namespace Catalog.Application.Products.GetById
                 })
                 .SingleOrDefaultAsync(cancellationToken);
 
-            if (product is null) 
+            if (product is null)
             {
                 return Result.Failure<GetByIdProductResponse>(ProductErrors.NotFound(query.Id));
             }

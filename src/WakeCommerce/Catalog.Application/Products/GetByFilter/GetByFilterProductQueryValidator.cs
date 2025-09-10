@@ -1,13 +1,13 @@
-﻿using Catalog.Application.Products.GetByFilter;
-using FluentValidation;
+﻿using FluentValidation;
 
-namespace Catalog.Application.Products.GetByFilterOrdered
+namespace Catalog.Application.Products.GetByFilter
 {
     public class GetByFilterProductQueryValidator : AbstractValidator<GetByFilterProductQuery>
     {
         public GetByFilterProductQueryValidator()
         {
-            When(x => x.Page.HasValue, () => {
+            When(x => x.Page.HasValue, () =>
+            {
                 RuleFor(x => x.Page.Value)
                     .GreaterThanOrEqualTo(0).WithMessage("Page must be equal or greater than 0.");
             });

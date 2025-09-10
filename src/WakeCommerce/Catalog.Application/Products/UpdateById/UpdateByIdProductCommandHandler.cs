@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Shared.Defaults.Providers;
 using Shared.Defaults.Results;
 
-namespace Catalog.Application.Products.Create
+namespace Catalog.Application.Products.UpdateById
 {
     public sealed class UpdateByIdProductCommandHandler(
         IApplicationDbContext dbContext,

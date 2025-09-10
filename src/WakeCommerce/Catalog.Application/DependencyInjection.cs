@@ -1,7 +1,7 @@
 ﻿using Catalog.Application.Abstractions.Handlers;
+using Catalog.Application.Decorators;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
-using Catalog.Application.Decorators;
 
 namespace Catalog.Application
 {
@@ -27,6 +27,6 @@ namespace Catalog.Application
             services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly, includeInternalTypes: true);
 
             return services;
-        }   
+        }
     }
 }
