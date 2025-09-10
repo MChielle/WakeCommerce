@@ -104,8 +104,8 @@ Esse design segue os princípios de **CQRS + DDD + Clean Architecture**.
 
 ---
 ## 🗳️ Banco de Dados e ORM
-Desenvolvido Code First, o bando de dados segue as instruções configuradas no EF na camada de Infraestrutura.
-Em um cenário simples foi adotado um modelo de domínio simples (Anemic Domain) para dar o passo inicial, mas é possível migrar facilmente para um modelo de Domínio Rico ou (Rich Domain)
+Desenvolvido Code First, utilizando PostgreSQL, o banco de dados segue as instruções configuradas no EF, na camada de Infraestrutura.
+Em um cenário simples foi adotado um modelo de domínio simples (Anemic Domain) para dar o modelo inicial, mas é possível migrar facilmente para um modelo de Domínio Rico ou (Rich Domain)
 - **Por exemplo:**
 ```
 		 Produto							Produto
@@ -130,3 +130,7 @@ No Powershell
 ```powershell
 dotnet ef migrations add CreateDatabase --project .\Catalog.Infrastructure\ --startup-project .\Catalog.Web.Api\ -o Database/Migrations
 ```
+## 🚗 Testes
+A infraestrutura foi montada para consumir um banco de dados em memória, tanto na execução dos testes de integração quanto nos testes unitários.
+Foi configurado um script no github actions para executar os tentes sempre que for executado um PR ou Commit e pode ser acessado no link abaixo.
+https://github.com/MChielle/WakeCommerce/actions
