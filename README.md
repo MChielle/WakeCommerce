@@ -20,8 +20,8 @@ Executando a apliacação no visual studio 2022 com Docker Desktop selecionar a 
 E a UI de teste do Swagger pode ser acessado pela URL https://localhost:5001/swagger/index.html
 
 O bando de dados possui 5 itens pré cadastrados para testes rápidos.
-- **id									name	   	quantity	price	created_at				updated_at**
 ```  
+id										name	   	quantity	price	created_at				updated_at
 00000000-0000-0000-0000-000000000001	Produto 1	10.000		1.50	2021-11-08 00:00:00+00	N
 00000000-0000-0000-0000-000000000002	Produto 2	3.333		1.50	2021-11-08 00:00:00+00	N
 00000000-0000-0000-0000-000000000003	Produto 3	4.100		1.99	2021-11-08 00:00:00+00	N
