@@ -3,7 +3,7 @@ using Catalog.Domain.Entities.Products;
 using Catalog.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
 
-namespace Unit.Tests
+namespace Unit.Tests.Handlers
 {
     public class CreateProductCommandHandlerTests : BaseUnitTest
     {

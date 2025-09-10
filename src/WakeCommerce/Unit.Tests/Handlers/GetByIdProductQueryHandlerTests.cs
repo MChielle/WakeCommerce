@@ -2,7 +2,7 @@
 using Catalog.Domain.Entities.Products;
 using Catalog.Infrastructure.Database;
 
-namespace Unit.Tests
+namespace Unit.Tests.Handlers
 {
     public class GetByIdProductQueryHandlerTests : BaseUnitTest
     {
