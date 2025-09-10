@@ -21,26 +21,27 @@ E a UI de teste do Swagger pode ser acessado pela URL https://localhost:5001/swa
 
 O bando de dados possui 5 itens pré cadastrados para testes rápidos.
 - **id									name	   	quantity	price	created_at				updated_at**
+```  
 00000000-0000-0000-0000-000000000001	Produto 1	10.000		1.50	2021-11-08 00:00:00+00	N
 00000000-0000-0000-0000-000000000002	Produto 2	3.333		1.50	2021-11-08 00:00:00+00	N
 00000000-0000-0000-0000-000000000003	Produto 3	4.100		1.99	2021-11-08 00:00:00+00	N
 00000000-0000-0000-0000-000000000004	Produto 4	7.100		1.50	2021-11-08 00:00:00+00	N
 00000000-0000-0000-0000-000000000005	Produto 5	3.330		1.50	2021-11-08 00:00:00+00	N
-
-- Resumo dos Endpoints
--**<<GET BY ID>>**
+```
+## 🔤 Resumo dos Endpoints
+- **GET BY ID**
 ```
 curl -X 'GET' \
   'https://localhost:5001/api/v1/Products/00000000-0000-0000-0000-000000000001/get-by-id' \
   -H 'accept: application/json'
 ```
--**<<GET BY FILTER>>**
+- **GET BY FILTER**
 ```
 curl -X 'GET' \
   'https://localhost:5001/api/v1/Products/get-by-filter?SearchTerm=Produto&SortColumn=Price&SortOrder=desc&Page=0&PageSize=2' \
   -H 'accept: application/json'
 ```
--**<<CREATE NEW PRODUCT>>**
+- **CREATE NEW PRODUCT**
 ```
 curl -X 'POST' \
   'https://localhost:5001/api/v1/Products/create-new-product' \
@@ -52,7 +53,7 @@ curl -X 'POST' \
   "price": 3.77
 }'
 ```
--**<<UPDATE BY ID>>**
+- **UPDATE BY ID**
 ```
 curl -X 'PUT' \
   'https://localhost:5001/api/v1/Products/00000000-0000-0000-0000-000000000002/update-by-id' \
@@ -88,6 +89,7 @@ curl -X 'DELETE' \
 - **SOLID
 
 ## 📂 Estrutura do Projeto
+```
 src/
 └── WakeCommerce/
 		├── Catalog.Application # Casos de uso (Application Layer)
@@ -97,14 +99,15 @@ src/
 		├── Shared.Defaults # Classes e contratos compartilhados
 		├── Unit.Tests # Testes unitários
 		└── Integration.Tests # Testes de integração
-  
+```  
 Esse design segue os princípios de **CQRS + DDD + Clean Architecture**.
 
 ---
 ## 🗳️ Banco de Dados e ORM
 Desenvolvido Code First, o bando de dados segue as instruções configuradas no EF na camada de Infraestrutura.
 Em um cenário simples foi adotado um modelo de domínio simples (Anemic Domain) para dar o passo inicial, mas é possível migrar facilmente para um modelo de Domínio Rico ou (Rich Domain)
-Por exemplo:
+- **Por exemplo:**
+```
 		 Produto							Produto
  			├── Id								├── Id
 			├── Name			===>>			├── Name
@@ -115,7 +118,7 @@ Por exemplo:
 			 										  ├── Value
 													  ├── Type
 													  └── Pack
-
+```
 ## 🛠️ Configuração do Banco de Dados
 
 ### Criar uma nova migration
