@@ -68,7 +68,7 @@ curl -X 'PUT' \
 -**DELETE BY ID**
 ```
 curl -X 'DELETE' \
-  'https://localhost:5001/api/v1/Products/019931c5-21f4-7f75-9884-f92dc3bd3749/delete-by-id' \
+  'https://localhost:5001/api/v1/Products/00000000-0000-0000-0000-000000000005/delete-by-id' \
   -H 'accept: application/json'
 ```
 ---
