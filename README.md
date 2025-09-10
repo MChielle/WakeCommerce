@@ -65,7 +65,7 @@ curl -X 'PUT' \
   "price": 3.77
 }'
 ```
--**<<DELETE BY ID>>**
+-**DELETE BY ID**
 ```
 curl -X 'DELETE' \
   'https://localhost:5001/api/v1/Products/019931c5-21f4-7f75-9884-f92dc3bd3749/delete-by-id' \
@@ -130,7 +130,3 @@ No Powershell
 ```powershell
 dotnet ef migrations add CreateDatabase --project .\Catalog.Infrastructure\ --startup-project .\Catalog.Web.Api\ -o Database/Migrations
 ```
-
-Exemplo
-[Name(string), Quantity(decimal) e Price(decimal)].
- [Id(Guid)]
