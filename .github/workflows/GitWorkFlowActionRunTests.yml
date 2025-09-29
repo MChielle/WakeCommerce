@@ -35,7 +35,7 @@ jobs:
     - name: Unit Tests
       run: dotnet test ./src/WakeCommerce/Unit.Tests/Unit.Tests.csproj --no-build --verbosity normal --logger "trx;LogFileName=UnitTests.trx"
     - name: Architecture Tests
-      run: dotnet test ./src/WakeCommerce/Architecture.Tests/Unit.Tests.csproj --no-build --verbosity normal --logger "trx;LogFileName=ArchitectureTests.trx"
+      run: dotnet test ./src/WakeCommerce/Architecture.Tests/Architecture.Tests.csproj --no-build --verbosity normal --logger "trx;LogFileName=ArchitectureTests.trx"
     - name: Publish Test Results
       uses: EnricoMi/publish-unit-test-result-action@v2
       if: (!cancelled())
