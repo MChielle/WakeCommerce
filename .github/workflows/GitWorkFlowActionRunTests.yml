@@ -31,17 +31,17 @@ jobs:
     - name: Build
       run: dotnet build ./src/WakeCommerce/WakeCommerce.sln --no-restore
     - name: Integration Tests
-      run: dotnet test ./src/WakeCommerce/Integration.Tests/Integration.Tests.csproj --no-build --verbosity normal --logger "trx;LogFileName=IntegrationTests.trx"
+      run: dotnet test ./src/WakeCommerce/Tests/Integration.Tests/Integration.Tests.csproj --no-build --verbosity normal --logger "trx;LogFileName=IntegrationTests.trx"
     - name: Unit Tests
-      run: dotnet test ./src/WakeCommerce/Unit.Tests/Unit.Tests.csproj --no-build --verbosity normal --logger "trx;LogFileName=UnitTests.trx"
+      run: dotnet test ./src/WakeCommerce/Tests/Unit.Tests/Unit.Tests.csproj --no-build --verbosity normal --logger "trx;LogFileName=UnitTests.trx"
     - name: Architecture Tests
-      run: dotnet test ./src/WakeCommerce/Architecture.Tests/Architecture.Tests.csproj --no-build --verbosity normal --logger "trx;LogFileName=ArchitectureTests.trx"
+      run: dotnet test ./src/WakeCommerce/Tests/Architecture.Tests/Architecture.Tests.csproj --no-build --verbosity normal --logger "trx;LogFileName=ArchitectureTests.trx"
     - name: Publish Test Results
       uses: EnricoMi/publish-unit-test-result-action@v2
       if: (!cancelled())
       with:
         files: |
-            ./src/WakeCommerce/Integration.Tests/TestResults/IntegrationTests.trx
-            ./src/WakeCommerce/Unit.Tests/TestResults/UnitTests.trx
-            ./src/WakeCommerce/Architecture.Tests/TestResults/ArchitectureTests.trx
+            ./src/WakeCommerce/Tests/Integration.Tests/TestResults/IntegrationTests.trx
+            ./src/WakeCommerce/Tests/Unit.Tests/TestResults/UnitTests.trx
+            ./src/WakeCommerce/Tests/Architecture.Tests/TestResults/ArchitectureTests.trx
             
