@@ -15,10 +15,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WakeCommerce\Catalog.Application\Catalog.Application.csproj" />
-    <ProjectReference Include="..\WakeCommerce\Catalog.Domain\Catalog.Domain.csproj" />
-    <ProjectReference Include="..\WakeCommerce\Catalog.Infrastructure\Catalog.Infrastructure.csproj" />
-    <ProjectReference Include="..\WakeCommerce\Catalog.Web.Api\Catalog.Web.Api.csproj" />
+    <ProjectReference Include="..\..\Catalog.Application\Catalog.Application.csproj" />
+    <ProjectReference Include="..\..\Catalog.Domain\Catalog.Domain.csproj" />
+    <ProjectReference Include="..\..\Catalog.Infrastructure\Catalog.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Catalog.Web.Api\Catalog.Web.Api.csproj" />
   </ItemGroup>
 
   <ItemGroup>

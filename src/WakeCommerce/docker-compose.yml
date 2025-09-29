@@ -20,3 +20,9 @@ services:
       - ./.containers/db:/var/lib/postgresql/data
     ports:
       - 5432:5432
+
+  consul:
+    image: hashicorp/consul:latest
+    container_name: consul-server
+    ports:
+      - 8500:8500
