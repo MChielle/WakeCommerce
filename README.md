@@ -19,7 +19,7 @@ O objetivo é fornecer uma base escalável para serviços de catálogo de produt
 Executando a apliacação no visual studio 2022 com Docker Desktop selecionar a compilação com docker-compose, ele cria um container com a API e o banco de dados.
 E a UI de teste do Swagger pode ser acessado pela URL https://localhost:5001/swagger/index.html
 
-O bando de dados possui 5 itens pré cadastrados para testes rápidos.
+O banco de dados possui 5 itens pré cadastrados para testes rápidos.
 ```  
 id										name	   	quantity	price	created_at				updated_at
 00000000-0000-0000-0000-000000000001	Produto 1	10.000		1.50	2021-11-08 00:00:00+00	N
